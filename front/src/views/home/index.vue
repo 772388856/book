@@ -1,10 +1,10 @@
 <template>
     <div class="home-page top-nav-height">
-    	<top-nav title="我的小说网" :back="false"></top-nav>
+    	<top-nav title="咸狗书" :back="false"></top-nav>
 
-    	<router-link to="/lists/female/hotfree" class="img-box">
+    	<a href="http://99-you.com" class="img-box">
     		<img src="//qidian.qpic.cn/qidian_common/349573/ee4ff8502c09c020ce5e90d6a41b4c32/0" />
-    	</router-link>
+    	</a>
 
     	<div class="module top-line" v-if="Object.prototype.toString.call(male.hotfree) == '[object Array]'">
     		<div class="title-box">
@@ -44,9 +44,9 @@
 			<loading v-else />
     	</div>
 
-    	<router-link to="/lists/male/hotfree" class="img-box top-line">
+    	<a href="http://99-you.com" class="img-box top-line">
     		<img src="//qidian.qpic.cn/qidian_common/349573/c3e154d703b8f2c3a72f060e385bfb89/0" />
-    	</router-link>
+    	</a>
 
     	<div class="module top-line" v-if="Object.prototype.toString.call(female.hotfree) == '[object Array]'">
     		<div class="title-box">
@@ -122,7 +122,7 @@
 						this.male.hotfree = res.data.data.records;
 					}else{
 						this.male.hotfree = '';
-					}					
+					}
 				});
 			},
 			getMaleFreenew(){
@@ -131,7 +131,7 @@
 						this.male.freenew = res.data.data.records;
 					}else{
 						this.male.freenew = '';
-					}					
+					}
 				});
 			},
 			getFemaleHotfree(){
@@ -140,7 +140,7 @@
 						this.female.hotfree = res.data.data.records;
 					}else{
 						this.female.hotfree = '';
-					}					
+					}
 				});
 			},
 			getFemaleFreenew(){
@@ -149,7 +149,7 @@
 						this.female.freenew = res.data.data.records;
 					}else{
 						this.female.freenew = '';
-					}					
+					}
 				});
 			}
 		}
